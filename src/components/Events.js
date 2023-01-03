@@ -1,21 +1,19 @@
 import React from "react";
 
-const Movies = ({ objects }) => {
-  // console.log(objects);
+const Events = ({ objects2 }) => {
+  console.log(objects2);
   return (
     <div className="flex">
-      {objects.map((object) => {
+      {objects2.map((object) => {
         console.log(object)
         return (
           <div className="ml-0 mr-9">
             <img
-              src={object?.link}
+              src={object}
               alt="Avatar: The Way of Water"
               className="rounded-md"
               width="210px"
             />
-            <div className="pt-3 text-xl">{object?.title}</div>
-            <div className="pt-1 text-md text-blue-gray-500">{object?.content}</div>
           </div>
         );
       })}
@@ -23,4 +21,4 @@ const Movies = ({ objects }) => {
   );
 };
 
-export default Movies;
+export default Events;
