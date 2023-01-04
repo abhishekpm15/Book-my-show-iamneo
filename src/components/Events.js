@@ -7,7 +7,7 @@ const Events = ({ objects2 }) => {
       {objects2.map((object) => {
         console.log(object)
         return (
-          <div className="ml-0 mr-9">
+          <div className="ml-0 mr-12">
             <img
               src={object}
               alt="Avatar: The Way of Water"
