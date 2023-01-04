@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 // import {AiOutlineSearch} from 'react-icons/ai'
+import { useNavigate } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
 import { Button } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -7,16 +9,15 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 // import { slide as Menu } from "react-burger-menu";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const auth = getAuth();
+  const user2 = auth.currentUser;
+  // const [isOpen, setIsOpen] = useState(false);
+  const logout = () => {
+    signOut(auth);
+    navigate("/");
+  };
 
-  // const [click, setClicked] = useState(false);
-  // const handleClick = () => {
-  //   setClicked(true);
-  // };
-
-  // const handleClose =()=>{
-  //   setClicked(false);
-  // }
   return (
     <div>
       {/* <nav className={`side-nav ${isOpen ? 'open' : ''}`}>
@@ -29,7 +30,7 @@ const Navbar = () => {
         <li className="nav-item">Menu item 3</li>
       </ul>
     </nav> */}
-      <div className="bg-[#333545] flex ">
+      <div className="bg-[#333545] flex">
         {/* {click ? (
           <>
             <Menu right>
@@ -98,7 +99,6 @@ const Navbar = () => {
               style={{ width: "500px" }}
             />
           </div>
-          {/* <input  className='h-10 rounded-md' type={'search'} placeholder={'Search for Movies, Events, Plays, Sports and Activities.'} style={{width:'500px'}}/> */}
         </div>
         <div className="pl-48 flex flex-col justify-center">
           <select>
@@ -108,16 +108,26 @@ const Navbar = () => {
           </select>
         </div>
 
-        <div className="flex flex-col justify-center pl-32">
-          <Button size="sm" color="red">
-            Sign in
-          </Button>
+        <div className="flex flex-col justify-center pl-3">
+        {user2 ? (
+          <>
+          <div className="flex">
+            <div className="text-[13px] my-3 mx-4 px-2 text-white">
+               {user2.email}
+            </div>
+
+            <Button color="red" onClick={logout} className="px-2 mx-4 " size="sm">
+              {" "}
+              LOGOUT{" "}
+            </Button>
+            </div>
+          </>
+        ) : (
+         <Link to ="/Login"> <Button className="my-1 mx-4" size="sm">Sign In</Button> </Link>
+        )}
         </div>
         <div className="flex flex-col justify-center pl-7">
-          <button
-            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-            // onClick={handleClick}
-          >
+          <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>

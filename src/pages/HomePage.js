@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import Carousels from "../components/Carousels";
-import { RemoveScrollBar } from "react-remove-scroll-bar";
+import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+// import { RemoveScrollBar } from "rea ct-remove-scroll-bar";
 
 const HomePage = () => {
   const imageLink = [
@@ -577,7 +579,11 @@ const HomePage = () => {
       content: "Bengali",
     },
   ];
-
+  const navigate = useNavigate();
+  const auth = getAuth();
+  const user2 = auth.currentUser;
+  const [load, setLoad] = useState(undefined);
+  
   return (
     <div>
       {/* <RemoveScrollBar /> */}
