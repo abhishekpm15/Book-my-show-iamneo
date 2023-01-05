@@ -10,9 +10,9 @@ import { notification } from "antd";
 const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [results3, setResults3] = useState();
-  const [api, contextHolder] = notification.useNotification();
+  const [user, setUser] =  useState(null);
+  const [results3, setResults3] =  useState();
+  const [api, contextHolder] =  notification.useNotification();
 
   const signOutUser = () => {
     signOut(auth)
