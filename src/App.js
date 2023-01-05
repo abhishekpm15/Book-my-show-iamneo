@@ -9,7 +9,6 @@ import BuzzPage from "./pages/BuzzPage";
 import SportPage from "./pages/SportPage";
 import ActivityPage from "./pages/ActivityPage";
 import PlayPage from "./pages/PlayPage";
-import Login from "./pages/Login";
 import { AuthContextProvider } from "./context/AuthContext";
 import Register from "./pages/Register";
 
@@ -19,8 +18,8 @@ function App() {
       <AuthContextProvider>
         <Router>
           <Routes>
-            <Route path ="/" element={<HomePage />} />
-            <Route path ="/HomePage" element={<HomePage />}/>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/HomePage" element={<HomePage />} />
             <Route path="/MoviesPage" element={<MoviesPage />} />
             <Route path="/streams" element={<StreamPage />} />
             <Route path="/events" element={<EventPage />} />
@@ -28,9 +27,7 @@ function App() {
             <Route path="/activities" element={<ActivityPage />} />
             <Route path="/sports" element={<SportPage />} />
             <Route path="/buzz" element={<BuzzPage />} />
-            <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
-
           </Routes>
         </Router>
       </AuthContextProvider>
