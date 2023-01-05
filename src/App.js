@@ -11,6 +11,7 @@ import ActivityPage from "./pages/ActivityPage";
 import PlayPage from "./pages/PlayPage";
 import { AuthContextProvider } from "./context/AuthContext";
 import Register from "./pages/Register";
+import UpComingMovies from "./pages/UpComingMovies";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/sports" element={<SportPage />} />
             <Route path="/buzz" element={<BuzzPage />} />
             <Route path="/Register" element={<Register />} />
+            <Route path="/upcomingmovies" element={<UpComingMovies />} />
           </Routes>
         </Router>
       </AuthContextProvider>

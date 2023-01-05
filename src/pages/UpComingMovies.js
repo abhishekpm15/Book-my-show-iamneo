@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar2";
-import Carousels from "../components/Carousels";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -9,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import {AiOutlineArrowRight} from "react-icons/ai"
-import { imageLink1,imageLink2,imageLink3 } from "../Links/MovieLinks";
+import { imageLink1,imageLink2,imageLink3,imageLink5,imageLink4,imageLink6 } from "../Links/MovieLinks";
 import Movies2 from "../components/Movies2";
 import { Link } from "react-router-dom";
 
@@ -49,7 +48,7 @@ const items = [
 ];
 
 const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
-const MoviesPage = () => {
+const UpComingMovies = () => {
   const [openKeys, setOpenKeys] = useState(["sub1"]);
   const onOpenChange = (keys) => {
     const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
@@ -65,9 +64,6 @@ const MoviesPage = () => {
       <div>
         <Navbar />
         <Navbar2 />
-      </div>
-      <div className="bg-[#ebebeb]">
-        <Carousels />
       </div>
       <div className="flex ml-36 mt-10">
         <div className="flex w-80">
@@ -92,17 +88,17 @@ const MoviesPage = () => {
               <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Tamil</button></li>
               <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">English</button></li>
               <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Telugu</button></li>
-              <li><button className="bg-red-400 rounded-xl w-20 h-7 text-white text-sm">Hindi</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Hindi</button></li>
               <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Malayalam</button></li>
               <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Bengali</button></li>
             </div>
             <div className="h-24 bg-gray-200 rounded-lg flex mt-4 justify-between">
               <div className="my-auto pl-5 font-bold text-xl">
-                Comming Soon
+                Now Showing
                 </div>
                 <div className="my-auto mr-8">
-                  <Link to="/upcomingmovies" className="no-underline flex items-center gap-3 text-red-700">
-                  Explore Upcoming Movies
+                  <Link to="/MoviesPage" className="no-underline flex items-center gap-3 text-red-700">
+                  In Cinemas Near You
                   <AiOutlineArrowRight />
                   </Link>
                 </div>
@@ -126,10 +122,29 @@ const MoviesPage = () => {
                       <Movies2 objects={imageLink3} />
                   </div>
               </div>  
+
+               <div className="recommended mt-10">
+                  <div className="">
+                      <Movies2 objects={imageLink4} />
+                  </div>
+              </div>
+
+              <div className="recommended mt-10">
+                  <div className="">
+                      <Movies2 objects={imageLink5} />
+                  </div>
+              </div>
+
+              <div className="recommended mt-10">
+                  <div className="">
+                      <Movies2 objects={imageLink6} />
+                  </div>
+              </div>
+
             </div>
       </div>
     </div>
   );
 };
 
-export default MoviesPage;
+export default UpComingMovies;
