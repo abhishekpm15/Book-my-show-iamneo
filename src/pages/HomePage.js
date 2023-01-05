@@ -4,9 +4,9 @@ import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import Carousels from "../components/Carousels";
-import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "./ImageLinks"
+import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "../Links/ImageLinks"
 
-var num = 1;
+
 const HomePage = () => {
   
 

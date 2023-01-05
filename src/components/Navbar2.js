@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Badge from "react-bootstrap/Badge";
 
 const Navbar2 = () => {
   return (
@@ -20,6 +21,9 @@ const Navbar2 = () => {
               className="no-underline text-blue-gray-100 hover:text-white"
             >
               Streams
+              <Badge bg="danger" className="ml-1 ">
+                New
+              </Badge>
             </Link>
           </li>
           <li>
@@ -64,10 +68,41 @@ const Navbar2 = () => {
           </li>
         </div>
         <div className="flex gap-4 col-auto pr-7 list-none">
-          <li>ListYourShow</li>
-          <li>Corporates</li>
-          <li>Offers</li>
-          <li>GiftCards</li>
+          <li>
+            <Link
+              to="/sports"
+              className="no-underline text-blue-gray-100 hover:text-white flex items-center"
+            >
+              ListYourShow
+              <Badge bg="danger" className="ml-1 ">
+                New
+              </Badge>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/plays"
+              className="no-underline text-blue-gray-100 hover:text-white"
+            >
+              Corporates
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/events"
+              className="no-underline text-blue-gray-100 hover:text-white"
+            >
+              Offers
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/streams"
+              className="no-underline text-blue-gray-100 hover:text-white"
+            >
+              GiftCards
+            </Link>
+          </li>
         </div>
       </div>
     </div>

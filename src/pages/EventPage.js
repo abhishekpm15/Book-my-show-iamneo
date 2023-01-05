@@ -83,12 +83,12 @@ const EventPage = () => {
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Events in Chennai</div>
             <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500">Workshops</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Online streaming events</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Music shows</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Comedy Shows</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Performance</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Kids</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">Workshops</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Online streaming events</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Music shows</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Comedy Shows</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Performance</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Kids</button></li>
             </div>
         
               <div className="recommended mt-10">

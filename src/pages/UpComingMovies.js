@@ -85,12 +85,12 @@ const UpComingMovies = () => {
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Movies in Chennai</div>
             <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Tamil</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">English</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Telugu</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Hindi</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Malayalam</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500">Bengali</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Tamil</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">English</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Telugu</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Hindi</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Malayalam</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Bengali</button></li>
             </div>
             <div className="h-24 bg-gray-200 rounded-lg flex mt-4 justify-between">
               <div className="my-auto pl-5 font-bold text-xl">

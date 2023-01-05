@@ -83,8 +83,8 @@ const PlayPage = () => {
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Plays in Chennai</div>
             <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500">Theatre</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500">Storytelling</button></li>
+              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">Theatre</button></li>
+              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Storytelling</button></li>
 
             </div>
               <div className="recommended mt-10">

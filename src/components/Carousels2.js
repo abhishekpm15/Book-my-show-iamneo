@@ -5,19 +5,15 @@ import Carousel from "react-bootstrap/Carousel";
 const data = [
   {
     image:
-      "https://assets-in.bmscdn.com/promotions/cms/creatives/1672736193489_jffweb.jpg",
+      "https://assets-in.bmscdn.com/promotions/cms/creatives/1672814908773_f1web.jpg",
   },
   {
     image:
-      "https://assets-in.bmscdn.com/promotions/cms/creatives/1670502578966_web.jpg",
-  },
-  {
-    image:
-      "https://assets-in.bmscdn.com/promotions/cms/creatives/1672137034486_ritvizweb.jpg",
+      "https://assets-in.bmscdn.com/promotions/cms/creatives/1672815509121_formulaeweb.jpg",
   },
 ];
 
-const Carousels = () => {
+const Carousels2 = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -26,7 +22,7 @@ const Carousels = () => {
 
   return (
     <div>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel activeIndex={index} onSelect={handleSelect} >
           {data.map((slide) => {
             return (
               <Carousel.Item interval={1000}>
@@ -43,4 +39,4 @@ const Carousels = () => {
   );
 };
 
-export default Carousels;
+export default Carousels2;
