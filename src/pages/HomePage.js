@@ -6,6 +6,7 @@ import Events from "../components/Events";
 import Carousels from "../components/Carousels";
 import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "./ImageLinks"
 
+var num = 1;
 const HomePage = () => {
   
 

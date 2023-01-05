@@ -66,10 +66,10 @@ const Movies = ({ objects }) => {
   return (
     <div className="">
       <Slider {...settings}>
-        {objects.map((object) => {
+        {objects.map((object,index) => {
           console.log(object);
           return (
-            <div className="">
+            <div className="" key={index}>
               <img
                 src={object?.link}
                 alt="images"
