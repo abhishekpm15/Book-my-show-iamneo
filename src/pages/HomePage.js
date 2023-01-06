@@ -4,6 +4,7 @@ import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import Carousels from "../components/Carousels";
+import Footer from "../components/Footer";
 import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "../Links/ImageLinks"
 
 
@@ -17,10 +18,10 @@ const HomePage = () => {
         <Navbar2 />
       </div>
       <div className="bg-[#ebebeb]">
-        <Carousels />
+        <Carousels  />
       </div>
 
-      <div className="bg-[#f5f5f5] mt-2">
+      <div className="bg-[#f5f5f5] mt-2 pb-4">
         <div className="recommended ml-24 mr-28 pt-7 pl-10">
           <div className="text-2xl font-bold text-gray-900 mb-3">
             Recommened Movies
@@ -115,6 +116,9 @@ const HomePage = () => {
             <Movies objects={thelatestLink} />
           </div>
         </div>
+      </div>
+      <div className="mt-32">
+      <Footer />
       </div>
     </div>
   );

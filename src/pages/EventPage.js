@@ -9,6 +9,7 @@ import {
 import { Menu } from "antd";
 import { imageLink1,imageLink2,imageLink3,imageLink4,imageLink5,imageLink6 } from "../Links/EventLinks";
 import Movies2 from "../components/Movies2";
+import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -128,6 +129,9 @@ const EventPage = () => {
               </div>    
 
             </div>
+      </div>
+      <div className="mt-32">
+      <Footer />
       </div>
     </div>
   );

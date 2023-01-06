@@ -67,9 +67,8 @@ const Movies = ({ objects }) => {
     <div className="">
       <Slider {...settings}>
         {objects.map((object,index) => {
-          console.log(object);
           return (
-            <div className="" key={index}>
+            <div className="" key={object.link}>
               <img
                 src={object?.link}
                 alt="images"

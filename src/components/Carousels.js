@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 
-const data = [
+const data1 = [
   {
     image:
       "https://assets-in.bmscdn.com/promotions/cms/creatives/1672736193489_jffweb.jpg",
@@ -17,19 +17,14 @@ const data = [
   },
 ];
 
+
 const Carousels = () => {
-  const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-
   return (
     <div>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {data.map((slide) => {
+        <Carousel>
+          {data1.map((slide,index) => {
             return (
-              <Carousel.Item interval={1000}>
+              <Carousel.Item interval={1000} key={data1.link}>
                 <img
                   className="d-block w-95 mx-auto pl-5 pr-5 pt-3"
                   src={slide.image}

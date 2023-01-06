@@ -4,21 +4,25 @@ import Carousel from "react-bootstrap/Carousel";
 
 const data = [
   {
-    image:"https://assets-in.bmscdn.com/promotions/cms/creatives/1672815509121_formulaeweb.jpg"
-      
+    image:
+      "https://assets-in.bmscdn.com/static/2021/06/des-sli-fiv.jpeg",
   },
   {
     image:
-    "https://assets-in.bmscdn.com/promotions/cms/creatives/1672814908773_f1web.jpg",
+      "https://assets-in.bmscdn.com/static/2021/06/des-sli-th.jpeg",
+  },
+  {
+    image:
+      "https://assets-in.bmscdn.com/static/2021/06/sli-o.jpeg",
   },
 ];
 
-const Carousels2 = () => {
+const Carousels3 = () => {
 
   return (
     <div>
         <Carousel>
-          {data.map((slide) => {
+          {data.map((slide,index) => {
             return (
               <Carousel.Item interval={1000} key={data.image}>
                 <img
@@ -28,10 +32,10 @@ const Carousels2 = () => {
                 />
               </Carousel.Item>
             );
-          })}
+          })} 
         </Carousel>
     </div>
   );
 };
 
-export default Carousels2;
+export default Carousels3;

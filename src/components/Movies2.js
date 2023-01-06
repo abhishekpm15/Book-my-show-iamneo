@@ -3,10 +3,9 @@ import React from 'react'
 const Movies2 = ({objects}) => {
   return (
         <div className="flex justify-between">
-            {objects.map((object) => {
-              console.log(object);
+            {objects.map((object,index) => {
               return (
-                <div className="">
+                <div className="" key={object.image}>
                   <img
                     src={object?.link}
                     alt="images"
