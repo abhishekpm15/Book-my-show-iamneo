@@ -13,6 +13,7 @@ import UpComingMovies from "./pages/UpComingMovies";
 import ListPage from "./pages/ListPage";
 import CorporatesPage from "./pages/CorporatesPage";
 import MovieDescPage from "./pages/MovieDescPage";
+import Timings from "./pages/Timings";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/showlist" element={<ListPage />} />
             <Route path="/corporates" element={<CorporatesPage />} />
             <Route path="/movie/:movieid" element={<MovieDescPage />} />
+            <Route path="/timings/:id" element={<Timings />} />
           </Routes>
         </Router>
       </AuthContextProvider>

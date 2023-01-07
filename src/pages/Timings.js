@@ -23,7 +23,7 @@ const allMovies = [
   ...imageLink6,
 ];
 
-const MovieDescPage = () => {
+const Timings = () => {
   const [modal1Open, setModal1Open] = useState(false);
   const [modal2Open, setModal2Open] = useState(false);
 
@@ -102,35 +102,35 @@ const MovieDescPage = () => {
       >
         <div className="font-bold text-xl">Select the language format</div>
         <div className="bg-[#f2f5f9] mt-3 font-semibold">ENGLISH</div>
-        <div className="flex flex-end space-x-11 mt-3 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-3 text-red-700 hover:text-white ">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>2D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>3D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>IMAX 3D</button>
           </div>
         </div>
         <div className="bg-[#f2f5f9] mt-4 font-semibold">TAMIL</div>
-        <div className="flex flex-end space-x-11 mt-4 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-4 text-red-700 hover:text-white ">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>2D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>3D</button>
           </div>
         </div>
         <div className="bg-[#f2f5f9] mt-4 font-semibold">TELUGU</div>
-        <div className="flex flex-end space-x-11 mt-4 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-4 text-red-700 hover:text-white ">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>3D</button>
           </div>
         </div> 
         <div className="bg-[#f2f5f9] mt-4 font-semibold">HINDI</div>
-        <div className="flex flex-end space-x-11 mt-4 text-red-700 ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-4 text-red-700 hover:text-white">
+          <div className="outline ouline-2 rounded px-4 hover:bg-red-300">
             <button>3D</button>
           </div>
         </div>
@@ -163,4 +163,4 @@ const MovieDescPage = () => {
   );
 };
 
-export default MovieDescPage;
+export default Timings;

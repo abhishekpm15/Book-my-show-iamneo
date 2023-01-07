@@ -3,7 +3,7 @@ import { Card } from "antd";
 
 const ListCards = (props) => {
   return (
-    <div className="site-card-border-less-wrapper transition ease-in-out delay-150 hover:-translate-y-3 duration-300 hover:shadow-2xl">
+    <div className="transition ease-in-out delay-150 hover:-translate-y-3 duration-300 hover:shadow-2xl ">
       <Card
         bordered={false}
         style={{
