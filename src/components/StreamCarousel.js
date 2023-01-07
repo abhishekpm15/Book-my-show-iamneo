@@ -43,9 +43,9 @@ const StreamCarousels = () => {
   return (
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
-        {data.map((slide) => {
+        {data.map((slide,index) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={slide.image1}>
               <div className="carousel-container relative">
               <img
                 className="d-block w-[100%] pt-3 opacity-60 h-[470px] filter-blur-50"

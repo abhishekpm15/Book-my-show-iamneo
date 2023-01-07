@@ -12,6 +12,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 import UpComingMovies from "./pages/UpComingMovies";
 import ListPage from "./pages/ListPage";
 import CorporatesPage from "./pages/CorporatesPage";
+import MovieDescPage from "./pages/MovieDescPage";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/HomePage" element={<HomePage />} />
-            <Route path="/MoviesPage" element={<MoviesPage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/movies" element={<MoviesPage />} />
             <Route path="/streams" element={<StreamPage />} />
             <Route path="/events" element={<EventPage />} />
             <Route path="/plays" element={<PlayPage />} />
@@ -29,8 +30,9 @@ function App() {
             <Route path="/sports" element={<SportPage />} />
             <Route path="/buzz" element={<BuzzPage />} />
             <Route path="/upcomingmovies" element={<UpComingMovies />} />
-            <Route path="/Listshow" element={<ListPage />} />
+            <Route path="/showlist" element={<ListPage />} />
             <Route path="/corporates" element={<CorporatesPage />} />
+            <Route path="/movie/:movieid" element={<MovieDescPage />} />
           </Routes>
         </Router>
       </AuthContextProvider>

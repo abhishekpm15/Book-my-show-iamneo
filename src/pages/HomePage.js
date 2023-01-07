@@ -5,23 +5,30 @@ import Movies from "../components/Movies";
 import Events from "../components/Events";
 import Carousels from "../components/Carousels";
 import Footer from "../components/Footer";
-import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "../Links/ImageLinks"
-
+import {
+  imageLink,
+  preimerLink,
+  eventLink,
+  eventsHappeningLink,
+  streamingLink,
+  outdoorLink,
+  laughterLink,
+  popularLink,
+  thelatestLink,
+} from "../Links/ImageLinks";
 
 const HomePage = () => {
-  
-
   return (
     <div>
       <div>
         <Navbar />
         <Navbar2 />
       </div>
-      <div className="bg-[#ebebeb]">
-        <Carousels  />
+      <div className="w-screen">
+        <Carousels type={0} />
       </div>
 
-      <div className="bg-[#f5f5f5] mt-2 pb-4">
+      <div className=" mt-2 pb-4">
         <div className="recommended ml-24 mr-28 pt-7 pl-10">
           <div className="text-2xl font-bold text-gray-900 mb-3">
             Recommened Movies
@@ -59,7 +66,7 @@ const HomePage = () => {
             <p className="text-white">Brand new releases every friday </p>
             <div className=" text-white">
               <Movies objects={preimerLink} />
-            </div>  
+            </div>
           </div>
         </div>
 
@@ -118,7 +125,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="mt-32">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

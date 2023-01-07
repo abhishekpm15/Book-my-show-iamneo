@@ -8,10 +8,11 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import {AiOutlineArrowRight} from "react-icons/ai"
-import { imageLink1,imageLink2,imageLink3 } from "../Links/MovieLinks";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { imageLink1, imageLink2, imageLink3 } from "../Links/MovieLinks";
 import Movies2 from "../components/Movies2";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -67,7 +68,7 @@ const MoviesPage = () => {
         <Navbar2 />
       </div>
       <div className="bg-[#ebebeb]">
-        <Carousels />
+        <Carousels type={0} />
       </div>
       <div className="flex ml-36 mt-10">
         <div className="flex w-80">
@@ -88,45 +89,72 @@ const MoviesPage = () => {
         </div>
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Movies in Chennai</div>
-            <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Tamil</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">English</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Telugu</button></li>
-              <li><button className="bg-red-400 rounded-xl w-20 h-7 text-white text-sm ">Hindi</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Malayalam</button></li>
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">Bengali</button></li>
+          <div className="list-none flex space-x-6 mt-4">
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Tamil
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">
+                English
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Telugu
+              </button>
+            </li>
+            <li>
+              <button className="bg-red-400 rounded-xl w-20 h-7 text-white text-sm ">
+                Hindi
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Malayalam
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-sm border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Bengali
+              </button>
+            </li>
+          </div>
+          <div className="h-24 bg-gray-200 rounded-lg flex mt-4 justify-between">
+            <div className="my-auto pl-5 font-bold text-xl">Comming Soon</div>
+            <div className="my-auto mr-8">
+              <Link
+                to="/upcomingmovies"
+                className="no-underline flex items-center gap-3 text-red-700"
+              >
+                Explore Upcoming Movies
+                <AiOutlineArrowRight />
+              </Link>
             </div>
-            <div className="h-24 bg-gray-200 rounded-lg flex mt-4 justify-between">
-              <div className="my-auto pl-5 font-bold text-xl">
-                Comming Soon
-                </div>
-                <div className="my-auto mr-8">
-                  <Link to="/upcomingmovies" className="no-underline flex items-center gap-3 text-red-700">
-                  Explore Upcoming Movies
-                  <AiOutlineArrowRight />
-                  </Link>
-                </div>
-              </div>
+          </div>
 
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink1} />
-                  </div>
-              </div>    
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink2} />
-                  </div>
-              </div>   
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink3} />
-                  </div>
-              </div>  
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink1} />
             </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink2} />
+            </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink3} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </div>
   );

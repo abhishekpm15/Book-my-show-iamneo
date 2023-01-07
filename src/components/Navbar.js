@@ -24,10 +24,10 @@ const Navbar = () => {
       <Drawer
         title={user ? `Hey ${user.displayName.split(" ")[0]}` : "Hey User"}
         placement="right"
-        onClose={() => setOpenSideBar(false)}
+        onClose={() => {setOpenSideBar(false)}}
         open={openSideBar}
       >
-        <div className="flex items-center space-x-2 ">
+        <div className="flex items-center space-x-2 w-screen ">
           <img
             src="https://in.bmscdn.com/webin/movies/superstar/rewards_login.png"
             className="w-10"
@@ -126,7 +126,7 @@ const Navbar = () => {
         onOk={() => setOpenModal(false)}
         okButtonProps={{ hidden: true }}
         cancelButtonProps={{ hidden: true }}
-        onCancel={() => setOpenModal(false)}
+        onCancel={() => {setOpenModal(false)}}
         title="Select City"
         width={1000}
       >
@@ -312,7 +312,7 @@ const Navbar = () => {
             )}
 
             <FaBars
-              onClick={() => setOpenSideBar(true)}
+              onClick={() => {setOpenSideBar(true)}}
               className="cursor-pointer"
             />
           </div>

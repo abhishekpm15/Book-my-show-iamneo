@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar2";
 import ListCarousel from "../components/ListCarousel";
 import ListCards from "../components/ListCards";
+import Footer from "../components/Footer";
 const ListPage = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const ListPage = () => {
       </div>
 
       <div>
-        <div className="flex justify-center text-5xl mt-5 font-bold">
+        <div className="flex justify-center text-5xl mt-5 font-bold ">
           What can you host ?
         </div>
         <div className="flex justify-center text-xl mt-4 pl-[20%] pr-[20%] align-middle">
@@ -115,11 +116,14 @@ const ListPage = () => {
               2L <li className="text-lg">Ticketed events</li>
             </li>
           </div>
-          
+
           <div className="inline-flex align-middle ml-[43%]  bg-white text-red-600 mt-20 rounded-2xl py-3 px-10">
-              <button>Contact us Today!</button>
-            </div>
+            <button>Contact us Today!</button>
+          </div>
         </div>
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </div>
   );

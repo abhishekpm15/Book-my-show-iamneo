@@ -4,12 +4,12 @@ import Badge from "react-bootstrap/Badge";
 
 const Navbar2 = () => {
   return (
-    <div className="hidden lg:inline-flex">
+    <div className="hidden lg:inline-flex w-screen">
       <div className="bg-[#222539] px-36 py-2 text-blue-gray-100 text-sm grid grid-cols-4">
         <div className="col-span-3 flex gap-4 list-none ">
           <li>
             <NavLink
-              to="/MoviesPage"
+              to="/movies"
               className="no-underline text-blue-gray-100 hover:text-white"
             >
               Movies
@@ -72,8 +72,8 @@ const Navbar2 = () => {
         <div className="flex gap-4 col-auto pr-7 list-none">
           <li>
             <NavLink
-              to="/Listshow"
-              className="no-underline text-blue-gray-100 hover:text-white flex items-center"
+              to="/showlist"
+              className="no-underline text-white flex items-center"
             >
               ListYourShow
               <sup>
@@ -86,7 +86,7 @@ const Navbar2 = () => {
           <li>
             <NavLink
               to="/corporates"
-              className="no-underline text-blue-gray-100 hover:text-white"
+              className="no-underline text-white"
             >
               Corporates
             </NavLink>
@@ -94,7 +94,7 @@ const Navbar2 = () => {
           <li>
             <NavLink
               to="/events"
-              className="no-underline text-blue-gray-100 hover:text-white"
+              className="no-underline text-white"
             >
               Offers
             </NavLink>
@@ -102,7 +102,7 @@ const Navbar2 = () => {
           <li>
             <NavLink
               to="/streams"
-              className="no-underline text-blue-gray-100 hover:text-white"
+              className="no-underline text-white"
             >
               GiftCards
             </NavLink>

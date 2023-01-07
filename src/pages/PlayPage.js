@@ -7,8 +7,9 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { imageLink1,imageLink2 } from "../Links/PlayLinks";
+import { imageLink1, imageLink2 } from "../Links/PlayLinks";
 import Movies2 from "../components/Movies2";
+import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -82,24 +83,33 @@ const PlayPage = () => {
         </div>
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Plays in Chennai</div>
-            <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">Theatre</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Storytelling</button></li>
-
+          <div className="list-none flex space-x-6 mt-4">
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Theatre
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Storytelling
+              </button>
+            </li>
+          </div>
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink1} />
             </div>
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink1} />
-                  </div>
-              </div>    
+          </div>
 
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink2} />
-                  </div>
-              </div>   
-
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink2} />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </div>
   );

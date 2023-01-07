@@ -7,7 +7,14 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { imageLink1,imageLink2,imageLink3,imageLink4,imageLink5,imageLink6 } from "../Links/EventLinks";
+import {
+  imageLink1,
+  imageLink2,
+  imageLink3,
+  imageLink4,
+  imageLink5,
+  imageLink6,
+} from "../Links/EventLinks";
 import Movies2 from "../components/Movies2";
 import Footer from "../components/Footer";
 
@@ -83,55 +90,78 @@ const EventPage = () => {
         </div>
         <div className="flex flex-col flex-auto mr-10 pr-10 ">
           <div className="text-2xl font-bold">Events in Chennai</div>
-            <div className="list-none flex space-x-6 mt-4">
-              <li><button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">Workshops</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Online streaming events</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Music shows</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Comedy Shows</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Performance</button></li>
-              <li><button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">Kids</button></li>
+          <div className="list-none flex space-x-6 mt-4">
+            <li>
+              <button className=" rounded-xl w-20 h-7 text-red-500 text-xs border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Workshops
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Online streaming events
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Music shows
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Comedy Shows
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Performance
+              </button>
+            </li>
+            <li>
+              <button className=" rounded-xl w-auto h-7 text-red-500 text-xs p-1 border-2 border-red-500 hover:text-white hover:bg-red-400">
+                Kids
+              </button>
+            </li>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink1} />
             </div>
-        
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink1} />
-                  </div>
-              </div>    
+          </div>
 
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink2} />
-                  </div>
-              </div>    
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink3} />
-                  </div>
-              </div>    
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink4} />
-                  </div>
-              </div>    
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink5} />
-                  </div>
-              </div>    
-
-              <div className="recommended mt-10">
-                  <div className="">
-                      <Movies2 objects={imageLink6} />
-                  </div>
-              </div>    
-
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink2} />
             </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink3} />
+            </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink4} />
+            </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink5} />
+            </div>
+          </div>
+
+          <div className="recommended mt-10">
+            <div className="">
+              <Movies2 objects={imageLink6} />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="mt-32">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

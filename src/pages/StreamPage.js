@@ -4,6 +4,7 @@ import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "../Links/StreamLinks"
+import Footer from "../components/Footer";
 
 
 const StreamPage = () => {
@@ -128,6 +129,9 @@ const StreamPage = () => {
             <Movies objects={thelatestLink} />
           </div>
         </div>
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </div>
   );

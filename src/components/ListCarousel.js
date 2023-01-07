@@ -17,9 +17,6 @@ const data = [
   ];
 
   const ListCarousel = () => {
-
-  
-    
   
     return (
       <div>
@@ -28,7 +25,7 @@ const data = [
               return (
                 <Carousel.Item interval={1000} key={data.image}>
                   <img
-                    className="mx-auto pt-3 w-[50%]"
+                    className="mx-auto pt-3 w-[60%]"
                     src={slide.image}
                     alt="slider-img"
                   />
