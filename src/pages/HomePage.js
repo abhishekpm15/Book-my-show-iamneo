@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import Carousels from "../components/Carousels";
-import Footer from "../components/Footer";
+
 import {
   imageLink,
   preimerLink,
@@ -20,10 +18,6 @@ import {
 const HomePage = () => {
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="w-screen">
         <Carousels type={0} />
       </div>
@@ -123,9 +117,6 @@ const HomePage = () => {
             <Movies objects={thelatestLink} />
           </div>
         </div>
-      </div>
-      <div className="mt-32">
-        <Footer />
       </div>
     </div>
   );

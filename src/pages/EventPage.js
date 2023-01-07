@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -16,7 +14,6 @@ import {
   imageLink6,
 } from "../Links/EventLinks";
 import Movies2 from "../components/Movies2";
-import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -67,10 +64,6 @@ const EventPage = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="flex ml-36 mt-10">
         <div className="flex w-80">
           <div className="text-2xl">
@@ -159,9 +152,6 @@ const EventPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-32">
-        <Footer />
       </div>
     </div>
   );

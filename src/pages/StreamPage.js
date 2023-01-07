@@ -1,10 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import Movies from "../components/Movies";
 import Events from "../components/Events";
 import {imageLink,preimerLink,eventLink,eventsHappeningLink,streamingLink,outdoorLink,laughterLink,popularLink,thelatestLink} from "../Links/StreamLinks"
-import Footer from "../components/Footer";
 
 
 const StreamPage = () => {
@@ -12,10 +9,6 @@ const StreamPage = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="bg-[#f5f5f5] mt-2">
         <div className="recommended ml-24 mr-28 pt-7 pl-10">
           <div className="text-2xl font-bold text-gray-900 mb-3">
@@ -129,9 +122,6 @@ const StreamPage = () => {
             <Movies objects={thelatestLink} />
           </div>
         </div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

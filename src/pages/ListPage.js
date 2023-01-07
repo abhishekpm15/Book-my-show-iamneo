@@ -1,16 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import ListCarousel from "../components/ListCarousel";
 import ListCards from "../components/ListCards";
-import Footer from "../components/Footer";
 const ListPage = () => {
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="bg-[#ebebeb]">
         <ListCarousel />
       </div>
@@ -121,9 +114,6 @@ const ListPage = () => {
             <button>Contact us Today!</button>
           </div>
         </div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import Carousels from "../components/Carousels";
 import {
   AppstoreOutlined,
@@ -12,7 +10,6 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { imageLink1, imageLink2, imageLink3 } from "../Links/MovieLinks";
 import Movies2 from "../components/Movies2";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -63,10 +60,6 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="bg-[#ebebeb]">
         <Carousels type={0} />
       </div>
@@ -152,9 +145,6 @@ const MoviesPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

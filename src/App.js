@@ -13,13 +13,16 @@ import UpComingMovies from "./pages/UpComingMovies";
 import ListPage from "./pages/ListPage";
 import CorporatesPage from "./pages/CorporatesPage";
 import MovieDescPage from "./pages/MovieDescPage";
-import Timings from "./pages/Timings";
+import BookMovie from "./pages/BookMovie";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <AuthContextProvider>
         <Router>
+          <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
@@ -34,8 +37,9 @@ function App() {
             <Route path="/showlist" element={<ListPage />} />
             <Route path="/corporates" element={<CorporatesPage />} />
             <Route path="/movie/:movieid" element={<MovieDescPage />} />
-            <Route path="/timings/:id" element={<Timings />} />
+            <Route path="/book/:movieid" element={<BookMovie />} />
           </Routes>
+          <Footer />
         </Router>
       </AuthContextProvider>
     </div>

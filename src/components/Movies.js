@@ -2,14 +2,19 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { useNavigate } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", color:"red", backgroundSize:"auto"}}
+      style={{
+        ...style,
+        display: "block",
+        color: "red",
+        backgroundSize: "auto",
+      }}
       onClick={onClick}
     />
   );
@@ -20,13 +25,15 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block",color:"red" }}
+      style={{ ...style, display: "block", color: "red" }}
       onClick={onClick}
     />
   );
 }
 
 const Movies = ({ objects }) => {
+  const navigate = useNavigate();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -66,13 +73,14 @@ const Movies = ({ objects }) => {
   return (
     <div className="">
       <Slider {...settings}>
-        {objects.map((object,index) => {
+        {objects.map((object, index) => {
           return (
             <div className="" key={object.link}>
               <img
                 src={object?.link}
                 alt="images"
-                className="rounded-md"
+                onClick={() => navigate(`/movie/${object?.id}`)}
+                className="rounded-md cursor-pointer"
                 width="210px"
               />
               <div className="pt-3 text-xl font-semibold">{object?.title}</div>

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -18,7 +16,6 @@ import {
 } from "../Links/MovieLinks";
 import Movies2 from "../components/Movies2";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -69,10 +66,6 @@ const UpComingMovies = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="flex ml-36 mt-10">
         <div className="flex w-80">
           <div className="text-2xl">
@@ -173,9 +166,6 @@ const UpComingMovies = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Navbar2 from "../components/Navbar2";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -9,7 +7,6 @@ import {
 import { Menu } from "antd";
 import { imageLink1, imageLink2 } from "../Links/PlayLinks";
 import Movies2 from "../components/Movies2";
-import Footer from "../components/Footer";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -60,10 +57,6 @@ const PlayPage = () => {
 
   return (
     <div>
-      <div>
-        <Navbar />
-        <Navbar2 />
-      </div>
       <div className="flex ml-36 mt-10">
         <div className="flex w-80">
           <div className="text-2xl">
@@ -107,9 +100,6 @@ const PlayPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

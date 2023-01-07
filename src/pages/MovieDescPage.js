@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { AiFillStar, AiOutlineRight } from "react-icons/ai";
-import Navbar2 from "../components/Navbar2";
-import { Button, Modal } from "antd";
+import { useNavigate } from "react-router-dom";
+import { Modal } from "antd";
 import {
   imageLink1,
   imageLink2,
@@ -12,7 +11,6 @@ import {
   imageLink5,
   imageLink6,
 } from "../Links/MovieLinks";
-import Footer from "../components/Footer";
 
 const allMovies = [
   ...imageLink1,
@@ -25,16 +23,13 @@ const allMovies = [
 
 const MovieDescPage = () => {
   const [modal1Open, setModal1Open] = useState(false);
-  const [modal2Open, setModal2Open] = useState(false);
+  const navigate = useNavigate();
 
   const { movieid } = useParams();
 
   const movie = allMovies.find((movie) => movie.id === movieid);
   return (
     <div className="w-screen">
-      <Navbar />
-      <Navbar2 />
-
       <div className="relative w-screen">
         <img
           style={{ filter: "brightness(.1)" }}
@@ -85,7 +80,9 @@ const MovieDescPage = () => {
             </div>
             <button
               className="px-4 py-2 rounded-md bg-[#F84364] font-bold text-white mt-4"
-              onClick={() => setModal1Open(true)}
+              onClick={() => {
+                setModal1Open(true);
+              }}
             >
               Book Tickets
             </button>
@@ -97,67 +94,79 @@ const MovieDescPage = () => {
         title={movie?.title}
         style={{}}
         open={modal1Open}
+        okButtonProps={{ hidden: true }}
+        cancelButtonProps={{ hidden: true }}
         onOk={() => setModal1Open(false)}
         onCancel={() => setModal1Open(false)}
       >
         <div className="font-bold text-xl">Select the language format</div>
         <div className="bg-[#f2f5f9] mt-3 font-semibold">ENGLISH</div>
-        <div className="flex flex-end space-x-11 mt-3 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-3 text-red-700 ">
+          <div
+            onClick={() =>
+              navigate(`/book/${movie?.id}?screen=2D&lang=ENGLISH`)
+            }
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>2D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div
+            onClick={() =>
+              navigate(`/book/${movie?.id}?screen=3D&lang=ENGLISH`)
+            }
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>3D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div
+            onClick={() =>
+              navigate(`/book/${movie?.id}?screen=IMAX%203D&lang=ENGLISH`)
+            }
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>IMAX 3D</button>
           </div>
         </div>
         <div className="bg-[#f2f5f9] mt-4 font-semibold">TAMIL</div>
-        <div className="flex flex-end space-x-11 mt-4 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+        <div className="flex flex-end space-x-11 mt-4 text-red-700">
+          <div
+            onClick={() => navigate(`/book/${movie?.id}?screen=2D&lang=TAMIL`)}
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>2D</button>
           </div>
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div
+            onClick={() => navigate(`/book/${movie?.id}?screen=3D&lang=TAMIL`)}
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>3D</button>
           </div>
         </div>
         <div className="bg-[#f2f5f9] mt-4 font-semibold">TELUGU</div>
         <div className="flex flex-end space-x-11 mt-4 text-red-700  ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div
+            onClick={() => navigate(`/book/${movie?.id}?screen=3D&lang=TELUGU`)}
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>3D</button>
           </div>
-        </div> 
+        </div>
         <div className="bg-[#f2f5f9] mt-4 font-semibold">HINDI</div>
         <div className="flex flex-end space-x-11 mt-4 text-red-700 ">
-          <div className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white">
+          <div
+            onClick={() => navigate(`/book/${movie?.id}?screen=3D&lang=HINDI`)}
+            className="outline ouline-2 rounded px-4 hover:bg-red-300 hover:text-white"
+          >
             <button>3D</button>
           </div>
         </div>
       </Modal>
       <br />
       <br />
-      <Button type="primary" onClick={() => setModal2Open(true)}>
-        Vertically centered modal dialog
-      </Button>
-      <Modal
-        title="Vertically centered modal dialog"
-        centered
-        open={modal2Open}
-        onOk={() => setModal2Open(false)}
-        onCancel={() => setModal2Open(false)}
-      >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
-      </Modal>
 
       <div className="p-10 space-y-5">
         <div className="font-bold text-2xl">About the Movie</div>
         <div className="text-sm">{movie?.info?.desc}</div>
-      </div>
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

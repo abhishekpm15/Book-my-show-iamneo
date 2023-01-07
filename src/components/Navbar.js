@@ -12,6 +12,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { GiHelp, GiWantedReward } from "react-icons/gi";
 import { Drawer, Modal } from "antd";
 import { Link } from "react-router-dom";
+import Navbar2 from "./Navbar2";
 
 const Navbar = () => {
   const { user, signOutUser, SignUp } = useAuth();
@@ -33,12 +34,12 @@ const Navbar = () => {
             className="w-10"
             alt=""
           />
-          <div className="flex">
-            <div className="flex-1">
+          <div className="flex space-x-3">
+            <div className="flex-1 w-40">
               Unlock special offers and great benefits
             </div>
             <button className=" outline outline-deep-orange-600 rounded-md text-xs text-deep-orange-400 p-2">
-              Login/ Register
+              Login /Register
             </button>
           </div>
         </div>
@@ -318,6 +319,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <Navbar2 />
     </>
   );
 };
