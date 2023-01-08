@@ -19,9 +19,9 @@ function getItem(label, key, icon, children, type) {
 }
 const items = [
   getItem("Languages", "sub1", <MailOutlined />, [
-    getItem("English", "1"),
-    getItem("Hindi", "2"),
-    getItem("Tamil", "3"),
+    getItem("English","1"),
+    getItem("Hindi","2"),
+    getItem("Tamil","3"),
     getItem("Marathi", "4"),
   ]),
   getItem("Geners", "sub2", <AppstoreOutlined />, [
