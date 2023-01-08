@@ -9,21 +9,25 @@ export const imageLink = [
     link: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICAxLjlLIHZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00330396-kzazfmpaqe-portrait.jpg",
     title: "Sembi",
     content: "Drama",
+    id: "124239487202",
   },
   {
     link: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni40LzEwICA1LjZLIHZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00345156-pdacdkazal-portrait.jpg",
     title: "Connect",
     content: "Horror/Thriller",
+    id: "124239487203",
   },
   {
     link: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny4yLzEwICA5OTcgdm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00103370-kpbpnpnrtv-portrait.jpg",
     title: "Raangi",
     content: "Drama",
+    id: "124239487204",
   },
   {
     link: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny4zLzEwICAyLjhLIHZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00330656-vdgxhtzdcf-portrait.jpg",
     title: "Driver Jamuna",
     content: "Crime/Thriller",
+    id: "124239487205",
   },
   {
     link: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA3IEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00346464-fbymwcxsxt-portrait.jpg",

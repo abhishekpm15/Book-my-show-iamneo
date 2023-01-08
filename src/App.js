@@ -17,6 +17,7 @@ import BookMovie from "./pages/BookMovie";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SeatPage from "./pages/SeatPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/movie/:movieid" element={<MovieDescPage />} />
             <Route path="/book/:movieid" element={<BookMovie />} />
             <Route path="/seats" element={<SeatPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
           <Footer />
         </Router>
