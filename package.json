@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -23,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-google-button": "^0.7.2",
     "react-icons": "^4.7.1",
+    "react-lottie": "^1.2.3",
     "react-remove-scroll-bar": "^2.3.4",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",

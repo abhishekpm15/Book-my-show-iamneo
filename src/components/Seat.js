@@ -1,30 +1,56 @@
 import React, { useState } from "react";
+import { MdChair } from "react-icons/md";
+import { useAuth } from "../context/AuthContext";
 
-const Seat = (props) => {
-    const [seats,setSeats] = useState(0);
-    // const [totalseats, setTotalSeats] = useState(seats);
-  const list = ["1", "2", "3", "4", "5", "6"];
+const Seat = ({ row, setSeatsSelected, seatsSelected }) => {
   return (
-    <div>
-      {list.map((seat, index) => {
-        return (
-          <>
-            <div className="w-5 h-10 bg-red-700 mt-3 ml-3 text-white rounded-lg flex justify-center items-center hover:bg-green-500 cursor-pointer px-3" onClick={()=>{setSeats(seats+1)}}>
-                {
-                    list[index]
-                }
-            </div>
-            <div className="ml-6">
-                {props.row}
-            </div>
-            <div>
-                {/* {seats} */}
-            </div>
-          </>
-        );
-      })}
+    <div className="flex items-center justify-center space-x-10">
+      <div className="font-bold text-2xl">{row}</div>
+      <div className="flex items-center space-x-5">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((seatNumber) => {
+          return (
+            <SingleSeat
+              seatNumber={seatNumber}
+              seatsSelected={seatsSelected}
+              setSeatsSelected={setSeatsSelected}
+              row={row}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
 
 export default Seat;
+
+const SingleSeat = ({ seatNumber, setSeatsSelected, seatsSelected, row }) => {
+  const { api } = useAuth();
+  const [selectedSeat, setSelectedSeat] = useState(false);
+
+  const onSeatClick = () => {
+    if (seatsSelected?.length > 9 && !selectedSeat) {
+      api.error({
+        message: "Error",
+        description: "You can select only 10 seats",
+        duration: 2000,
+      });
+      return;
+    }
+    setSelectedSeat(!selectedSeat);
+    if (selectedSeat) {
+      const filteredSeats = seatsSelected.filter(
+        (seat) => seat !== `${row}-${seatNumber}`
+      );
+      setSeatsSelected(filteredSeats);
+    } else {
+      setSeatsSelected([...seatsSelected, `${row}-${seatNumber}`]);
+    }
+  };
+  return (
+    <MdChair
+      onClick={onSeatClick}
+      className={`seat ${selectedSeat && "seat-selected"}`}
+    />
+  );
+};
