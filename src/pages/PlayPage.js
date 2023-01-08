@@ -5,7 +5,7 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { imageLink1, imageLink2 } from "../Links/PlayLinks";
+import { imageLink1,imageLink2 } from "../Links/PlayLinks";
 import Movies2 from "../components/Movies2";
 
 function getItem(label, key, icon, children, type) {
