@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AiFillStar, AiOutlineRight } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
 import { Modal } from "antd";
 import {
   imageLink1,

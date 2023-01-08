@@ -3,7 +3,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { ImNotification } from "react-icons/im";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { Tooltip } from "antd";
-import { Modal } from "antd";
+import { Modal, Menu } from "antd";
 import {
   imageLink1,
   imageLink2,
@@ -12,7 +12,6 @@ import {
   imageLink5,
   imageLink6,
 } from "../Links/MovieLinks";
-import { Menu } from "antd";
 
 const allMovies = [
   ...imageLink1,
@@ -80,19 +79,40 @@ const BookMovie = () => {
           Please note that there would be an additional non-refundable charge
           towards 3D glasses.
         </div>
-        <div className="mt-3 text-xl font-bold">
-          How many seats ?
-        </div>
-        <div className="flex justify-around mt-3 cursor-pointer" onClick={()=>{navigate("/seats")}} >
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">1</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">2</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">3</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">4</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">5</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">6</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">7</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">8</li>
-          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">9</li>
+        <div className="mt-3 text-xl font-bold">How many seats ?</div>
+        <div
+          className="flex justify-around mt-3 cursor-pointer"
+          onClick={() => {
+            navigate("/seats");
+          }}
+        >
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            1
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            2
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            3
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            4
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            5
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            6
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            7
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            8
+          </li>
+          <li className="hover:bg-red-600 rounded-xl py-1 px-3 hover:text-white">
+            9
+          </li>
         </div>
       </Modal>
       <div className="bg-[#333545] text-white text-3xl pl-20 pt-5 pb-5">
