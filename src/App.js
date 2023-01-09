@@ -18,6 +18,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SeatPage from "./pages/SeatPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/book/:movieid" element={<BookMovie />} />
             <Route path="/seats" element={<SeatPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
         </Router>
