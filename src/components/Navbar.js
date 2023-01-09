@@ -152,7 +152,7 @@ const Navbar = () => {
       <div className="w-screen bg-[#333444]">
         <div className="flex justify-between py-3 w-[90%] ml-36">
           <div className="flex items-center space-x-10 lg:w-1/2 ">
-            <Link to="/">
+            <Link to="/" className="no-underline">
               <svg
                 viewBox="0 0 88 26"
                 height="33.9"
@@ -171,7 +171,11 @@ const Navbar = () => {
                   ></path>
                 </g>
               </svg>
+              <div className=" text-white text-center">
+              ABHISHEK ❤️
+            </div>
             </Link>
+            
 
             <div className="bg-white hidden lg:inline-flex flex-1 space-x-4 items-center py-2 px-3 rounded-sm ">
               <AiOutlineSearch className="text-gray-700 w-5 h-5" />

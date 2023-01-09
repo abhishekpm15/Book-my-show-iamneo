@@ -3,6 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="pb-5 bg-[#313035] mt-20 pt-5 pl-5 pr-5 text-gray-500 ">
+      <div className="text-2xl font-white flex flex-col items-center">
+        Made by Abhishek aka ATHREYA
+        <div className="mb-4"> I ❤️ CODE + COFFEE</div>
+      </div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In leo risus,
       aliquet quis quam at, sodales suscipit ante. Morbi ac maximus erat. Aenean
       quis feugiat libero. Pellentesque mollis pretium metus. Ut fringilla
