@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <Router>
-          <Navbar />
+          <Navbar/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
