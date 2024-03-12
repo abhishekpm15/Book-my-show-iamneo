@@ -115,7 +115,8 @@ const MoviesPage = () => {
             </li>
           </div>
           <div className="h-24 bg-gray-200 rounded-lg flex mt-4 justify-between">
-            <div className="my-auto pl-5 font-bold text-xl">Comming Soon</div>
+          {/* comming -> coming */}
+            <div className="my-auto pl-5 font-bold text-xl">Coming Soon</div>
             <div className="my-auto mr-8">
               <Link
                 to="/upcomingmovies"
